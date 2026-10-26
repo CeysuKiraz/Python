@@ -83,7 +83,7 @@ while True:
     print("\n--- KAYITLI TÜM FİLM VE DİZİLER ---")
     with open(DOSYA_ADI, mode="r", encoding="utf-8-sig") as dosya:
       okuyucu = csv.reader(dosya, delimiter=";")
-      baslik = next(okuyucu)  # İlk satır tablo başlığı olduğu için atlıyoruz
+      baslik = next(okuyucu) 
 
       sayac = 0
       for satir in okuyucu:
@@ -100,11 +100,11 @@ while True:
     print("\n--- EN YÜKSEK PUANLI YAPIMLAR (4.0 ve Üzeri) ---")
     with open(DOSYA_ADI, mode="r", encoding="utf-8-sig") as dosya:
       okuyucu = csv.reader(dosya, delimiter=";")
-      baslik = next(okuyucu)  # Başlık satırını atla
+      baslik = next(okuyucu) 
 
       bulundu = False
       for satir in okuyucu:
-        puan_degeri = float(satir[6])  # 6. indeks Puan sütunu
+        puan_degeri = float(satir[6])  
         if puan_degeri >= 4.0:
           print(
               f"★ {satir[1]} ({satir[2]}) - Puan: {satir[6]}/5 | En Sevilen"
